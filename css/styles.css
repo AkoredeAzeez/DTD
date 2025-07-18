@@ -254,7 +254,7 @@ hr {
 
 .hero-intro .headline {
     font-size: clamp(1.6em, 3vw, 2.2em); /* Responsive font size */
-    color: var(--brown); /* Changed from --brown to --primary-color */
+    color: var(--white); /* Changed from --brown to --primary-color */
     margin-bottom: 30px;
 }
 
@@ -1032,7 +1032,7 @@ hr {
 
     .hero-intro .headline {
         font-size: 1.3em;
-        margin-bottom: 20px;
+        margin-bottom: 20px;l
     }
 
     .action-buttons {
