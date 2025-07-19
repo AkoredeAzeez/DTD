@@ -1,3 +1,50 @@
+/* Collapsible Impact Category Styles */
+.impact-category-collapsible {
+    margin-bottom: 2rem;
+}
+.collapsible-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    background: var(--primary-color, #2a4d8f);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.75em 1.5em;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-bottom: 1em;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.collapsible-toggle:hover, .collapsible-toggle:focus {
+    background: #18325b;
+}
+.collapsible-toggle .toggle-icon {
+    font-size: 1.3em;
+    transition: transform 0.3s;
+    display: inline-block;
+}
+.collapsible-toggle[aria-expanded="true"] .toggle-icon {
+    transform: rotate(45deg);
+}
+.impact-category-content {
+    border-left: 4px solid var(--primary-color, #2a4d8f);
+    background: #f7faff;
+    padding: 1.2em 1.5em;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 1.5em;
+    transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.3s;
+    overflow: hidden;
+    opacity: 1;
+}
+.impact-category-content[hidden] {
+    max-height: 0;
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
 /* General Styling */
 :root {
     --primary-color: #0056b3; /* A strong blue, reminiscent of academic/professionalism */

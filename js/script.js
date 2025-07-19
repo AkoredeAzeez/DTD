@@ -1,3 +1,19 @@
+// Toggle for impact-category-collapsible
+function toggleImpactCategory() {
+    var content = document.querySelector('.impact-category-content');
+    var btn = document.querySelector('.collapsible-toggle');
+    var icon = btn.querySelector('.toggle-icon');
+    var expanded = btn.getAttribute('aria-expanded') === 'true';
+    if (!expanded) {
+        content.style.display = 'block';
+        btn.setAttribute('aria-expanded', 'true');
+        icon.textContent = '−';
+    } else {
+        content.style.display = 'none';
+        btn.setAttribute('aria-expanded', 'false');
+        icon.textContent = '+';
+    }
+}
 document.addEventListener('DOMContentLoaded', () => {
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
