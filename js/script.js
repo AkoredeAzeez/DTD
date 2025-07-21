@@ -1,8 +1,16 @@
 // Toggle for impact-category-collapsible
-function toggleImpactCategory() {
-    var content = document.querySelector('.impact-category-content');
-    var btn = document.querySelector('.collapsible-toggle');
-    var icon = btn.querySelector('.toggle-icon');
+function toggleImpactCategory(section) {
+    let content, btn, icon;
+    if (!section) {
+        // Default: Faculty of Law
+        content = document.querySelector('.impact-category-content');
+        btn = document.querySelector('.collapsible-toggle');
+    } else {
+        content = document.getElementById('impact-' + section);
+        btn = content ? content.previousElementSibling : null;
+    }
+    if (!content || !btn) return;
+    icon = btn.querySelector('.toggle-icon');
     var expanded = btn.getAttribute('aria-expanded') === 'true';
     if (!expanded) {
         content.style.display = 'block';
