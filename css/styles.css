@@ -1166,6 +1166,42 @@ hr {
     .award-item .award-description {
         font-size: 0.8em;
     }
+    
+    .awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+    }
+
+    .award-item {
+        background-color: #f9f9f9;
+        border-radius: 12px;
+        padding: 1rem;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        transition: transform 0.3s ease;
+    }
+
+    .award-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .award-item img {
+        max-width: 80px;
+        margin-bottom: 0.75rem;
+    }
+
+    .award-title {
+        font-weight: 600;
+        font-size: 1rem;
+    }
+
+    .award-description {
+        font-size: 0.9rem;
+        color: #666;
+    }
+
 
     .filter-btn {
         padding: 8px 15px;
@@ -1280,4 +1316,5 @@ hr {
     .contact-grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
+    
 }
