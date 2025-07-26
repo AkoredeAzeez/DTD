@@ -22,6 +22,7 @@ function toggleImpactCategory(section) {
         icon.textContent = '+';
     }
 }
+
 document.addEventListener('DOMContentLoaded', () => {
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -60,7 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-
     // Carousel for About Section
     const carouselTrack = document.querySelector('.carousel-track');
     const carouselImages = document.querySelectorAll('.photo-carousel img');
@@ -70,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Get width of one image dynamically, consider margin/gap if present
     const getCarouselImageWidth = () => carouselImages[0] ? carouselImages[0].offsetWidth : 0;
     let imageWidth = getCarouselImageWidth();
-
 
     function updateCarousel() {
         if (!carouselTrack) return;
@@ -97,7 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
             updateCarousel();
         }, 5000); // Change image every 5 seconds
     }
-
 
     // Agenda Accordion
     const agendaTitles = document.querySelectorAll('.agenda-title');
